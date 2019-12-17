@@ -57,6 +57,7 @@ stages:
     environment: 'Development'
     stageName: 'DeployDevelopment'
     webAppName: '$(DevEnvironmentWebAppName)'
+    appType: 'webAppLinux'
 - template: templates/deploy.yml
   parameters:
     deployment: 'DeployTest'
@@ -64,6 +65,7 @@ stages:
     environment: 'Test'
     stageName: 'DeployTest'
     webAppName: '$(TestEnvironmentWebAppName)'
+    appType: 'webAppLinux'
 - template: templates/deploy.yml
   parameters:
     deployment: 'DeployProduction'
@@ -71,3 +73,4 @@ stages:
     environment: 'Production'
     stageName: 'DeployProduction'
     webAppName: '$(WebAppName)'
+    appType: 'webAppLinux'
